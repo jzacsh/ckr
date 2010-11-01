@@ -5,7 +5,7 @@ int main() {
   int delim = 32; //@TODO: set dynamically
 
   while ((c = getchar()) != EOF)
-    printf("%d%d", c, delim);
+    printf("%d%c", c, delim);
 
   printf("\n");
 
