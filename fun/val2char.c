@@ -1,9 +1,9 @@
 #include <stdio.h>
 #include <stdlib.h>
-#define DELIM 32 //character delimiter
+#define DELIM 32 //@TODO: dynamically set delim char
 
 int main() {
-  int c;
+  int c, num;
 
   char ch[4];
   char *ptr = ch;
@@ -11,7 +11,6 @@ int main() {
   while ((c = getchar()) != EOF) {
     if (c == DELIM) {
       *ptr++ = '\0';
-      int num;
       num = atoi(ch);
       printf("%c", num);
       ch[0] = ch[1]= ch[2] = 0;

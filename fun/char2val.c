@@ -2,9 +2,10 @@
 
 int main() {
   int c;
+  int delim = 32; //@TODO: set dynamically
 
   while ((c = getchar()) != EOF)
-    printf("%d ", c);
+    printf("%d%d", c, delim);
 
   printf("\n");
 
