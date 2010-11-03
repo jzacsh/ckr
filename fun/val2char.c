@@ -1,5 +1,5 @@
 #include <stdio.h>
-#include <stdlib.h>
+#include <stdlib.h> //atoi()
 #define DELIM 32 //@TODO: dynamically set delim char
 
 int main() {
