@@ -1,10 +1,5 @@
 #include <stdio.h>
 
-#define MAXVAL 100  /* maximum depth of val stack */
-
-void push(double);
-double pop(void);
-
 int sp = 0;         /* next free stack position */
 double val[MAXVAL]; /* value stack */
 

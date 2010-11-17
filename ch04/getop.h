@@ -1,8 +1,6 @@
 #include <stdio.h>
 #include <ctype.h>
 
-#define NUMBER '0'  /* signal that anumber was found */
-
 int getch(void);
 void ungetch(int);
 
