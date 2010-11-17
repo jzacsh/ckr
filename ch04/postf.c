@@ -5,8 +5,6 @@
 #define MAXOP  100  /* max size of operand or operator */
 #define NUMBER '0'  /* signal that anumber was found */
 
-int getop(char []);
-
 /* reverse Polic calculator */
 main() {
   int type;
