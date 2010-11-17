@@ -1,13 +1,11 @@
 #include <stdio.h>
 #include <stdlib.h> /* for atof() */
+#include "stdlib.h"
 
 #define MAXOP  100  /* max size of operand or operator */
 #define NUMBER '0'  /* signal that anumber was found */
 
 int getop(char []);
-void push(double);
-double pop(void);
-
 
 /* reverse Polic calculator */
 main() {
@@ -47,3 +45,5 @@ main() {
   } //end while
   return 0;
 }
+
+
