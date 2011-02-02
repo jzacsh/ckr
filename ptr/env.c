@@ -11,9 +11,10 @@ int main (int argc, char *argv[], char *envp[]) {
     char *env;
     int opt;
 
-    if (argc < 1)
-        while (env = envp[i++])
-            printf("%s\n", env);
+    if (DEBUG) printf("DEBUG: argc: %d\n", argc);
+
+    if (argc == 1)
+        while (envp[i]) printf("%s\n", envp[i++]);
 
     while ((opt = getopt(argc, argv, "i0u")) != -1) {
         if (DEBUG) printf("DEBUG: opt is: %c\n", opt);
