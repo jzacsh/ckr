@@ -9,13 +9,29 @@ int DEBUG = 1;
 int main (int argc, char *argv[], char *envp[]) {
     int i = 0;
     char *env;
-    int opts = getopt(argc, argv, "i,0,u");
+    int opt;
 
-    if (opts == -1)
+    if (argc < 1)
         while (env = envp[i++])
             printf("%s\n", env);
 
-    if (DEBUG) printf("DEBUG: opts = %d\n", opts);
+    while ((opt = getopt(argc, argv, "i0u")) != -1) {
+        if (DEBUG) printf("DEBUG: opt is: %c\n", opt);
+        switch (opt) {
+            case 'i':
+                printf("implement `%c`!\n", opt);
+                break;
+            case 'u':
+                printf("implement `%c`!\n", opt);
+                break;
+            case '0':
+                printf("implement `%c`!\n", opt);
+                break;
+            default:
+                printf("you ain't doing n0thin, boy!\n");
+                break;
+        }
+    }
 
     return 0;
 }
