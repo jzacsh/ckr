@@ -23,8 +23,8 @@ int main(int argc, char *argv[], char *envp[]) {
         if (DEBUG) printf("DEBUG: argv[%d] = %s\n", i-1, argv[i-1]);
 
     //@see: strerror(3p) -- what is this?
-    fprintf(stderr, "gah, error!\n");
-    return(4);
+    if (DEBUG) fprintf(stderr, "gah, error!\n");
+    if (DEBUG) return(4);
 /**
  * @see: open(3p)
  * @see: fcntl(3p)
