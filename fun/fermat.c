@@ -1,9 +1,9 @@
 #include <stdio.h>
 
-int fermat(int);
-int mypow(int, int);
+long fermat(long);
+long mypow(long, long);
 
-int mypow(int base, int exp) {
+long mypow(long base, long exp) {
     //weird math - why is this?
     if (!exp) {
         return 1;
@@ -12,7 +12,7 @@ int mypow(int base, int exp) {
         return base;
     }
 
-    int result = base;
+    long result = base;
     //actual exponentation algorithm:
     while (exp--) {
         result = base * result;
@@ -28,18 +28,12 @@ int mypow(int base, int exp) {
  * @param  int  index to be calculated
  * @return  int  result of the Fermat calculation at index.
  */
-int fermat(int index) {
+long fermat(long index) {
     return mypow(2, mypow(2, index)) - 1;
 }
 
 int main(int argc, char *argv[], char *envp[]) {
-    int i = 0, n;
-
-/*
-    if (argc != 2) {
-        return 1;
-    }
-*/
+    long i = 0, n;
 
     while (n = fermat(i)) {
         printf("fermat(%d) = %d\n", i++, n);
