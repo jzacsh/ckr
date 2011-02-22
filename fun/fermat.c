@@ -1,21 +1,23 @@
 #include <stdio.h>
 
 int fermat(int);
-int pow(int, int);
+int mypow(int, int);
 
-int pow(int base, int exp) {
-    int res = 1;
-
-    if (exp) {
-        res = base;
+int mypow(int base, int exp) {
+    //weird math - why is this?
+    if (!exp) {
+        return 1;
+    }
+    else if (exp == 1) {
+        return base;
     }
 
-    --exp;
+    int result = base;
+    //actual exponentation algorithm:
     while (exp--) {
-        res = base * res;
+        result = base * result;
     }
-
-    return res;
+    return result;
 }
 
 /**
@@ -27,7 +29,7 @@ int pow(int base, int exp) {
  * @return  int  result of the Fermat calculation at index.
  */
 int fermat(int index) {
-    return pow(2, pow(2, index)) - 1;
+    return mypow(2, mypow(2, index)) - 1;
 }
 
 int main(int argc, char *argv[], char *envp[]) {
