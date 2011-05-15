@@ -17,7 +17,7 @@ int main(int argc, char *argv[], char *envp[]) {
     int x = 3, i = 0;
     int *ptr = &x;
 
-    if (DEBUG) printf("x is pointing to: %d\npointer points to value of: %d\n", x, *ptr);
+    if (DEBUG) printf("x is pointing to: %d\nptr->[addr: %d] = %d\n", x, ptr, *ptr);
 
     while (argv[i++])
         if (DEBUG) printf("DEBUG: argv[%d] = %s\n", i-1, argv[i-1]);
